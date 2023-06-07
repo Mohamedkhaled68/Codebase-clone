@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/Home.js';
+import Work from './components/Work.js';
+import OurServices from './components/OurServices.js';
+import Careers from './components/Careers.js';
+import AboutUs from './components/AboutUs.js';
+import ContactUs from './components/ContactUs.js';
+import NavBar from './components/NavBar.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <>
+            <NavBar />
+            <div className="container mx-auto">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/work" element={<Work />} />
+                    <Route path="/ourservices" element={<OurServices />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/aboutus" element={<AboutUs />} />
+                    <Route path="/contactus" element={<ContactUs />} />
+                </Routes>
+            </div>
+        </>
+    );
+};
 
 export default App;

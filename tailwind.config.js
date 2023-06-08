@@ -19,7 +19,7 @@ module.exports = {
             // => @media (min-width: 1536px) { ... }
         },
         fontFamily: {
-            pop: 'poppins'
+            pop: 'poppins',
         },
         extend: {
             colors: {
@@ -27,5 +27,5 @@ module.exports = {
             },
         },
     },
-    plugins: [],
+    plugins: [require('tailwind-scrollbar')],
 };

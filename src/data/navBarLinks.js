@@ -1,4 +1,4 @@
-const linkStyle = 'hover:text-primary ease-linear duration-500 font-pop ml-5 lg:ml-8';
+const linkStyle = 'text-[0.9rem] hover:text-primary ease-linear duration-500 font-pop ml-5 lg:ml-8';
 export const links = [
     {
         name: 'Home',

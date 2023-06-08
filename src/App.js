@@ -12,7 +12,7 @@ const App = () => {
     return (
         <>
             <NavBar />
-            <div className="container mx-auto">
+            <div className="scrollbar-thin scrollbar-thumb-primary">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/work" element={<Work />} />

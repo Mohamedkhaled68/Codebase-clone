@@ -16,7 +16,7 @@ const NavBar = () => {
         <nav
             className={
                 navBar
-                    ? 'bg-white transition-shadow duration-300 ease-linear shadow-md py-7 fixed w-full top-0 z-50'
+                    ? 'bg-white transition-shadow duration-300 ease-linear shadow-sm py-7 fixed w-full top-0 z-50'
                     : 'bg-white py-7 fixed w-full top-0 z-50'
             }
         >
@@ -40,19 +40,6 @@ const NavBar = () => {
                         );
                     })}
                 </ul>
-                {/* <div className="flex items-center">
-                    {links.map((link) => {
-                        return (
-                            <NavLink
-                                to={link.path}
-                                className={link.style}
-                                key={link.id}
-                            >
-                                {link.name}
-                            </NavLink>
-                        );
-                    })}
-                </div> */}
             </div>
         </nav>
     );

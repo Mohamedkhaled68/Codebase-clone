@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <>
             <section className="flex flex-col items-center py-8">
-                <h1 className="text-center text-gray-900 mb-8 text-[3rem] md:text-[4rem] font-[600] md:w-[600px] lg:w-[460px] leading-[4rem] md:leading-[4.9rem]">
+                <h1 className="text-center text-gray-900 mb-8 text-[3rem] md:text-[4rem] font-[600] md:w-[600px] lg:w-[460px] leading-[4rem] md:leading-[4.4rem]">
                     WELCOME TO THE AGENCY WHERE COMPANIES COME TO SCALE.
                 </h1>
                 <video className="w-screen" src={myVid} autoPlay muted loop />

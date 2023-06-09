@@ -14,19 +14,18 @@ const NavBar = () => {
     const scroll = () => {
         if (window.scrollY >= 30) {
             setNavbar(true);
-            setMenu(false);
         } else {
             setNavbar(false);
         }
     };
     window.addEventListener('scroll', scroll);
     return (
-        <div className="relative">
+        <div className="fixed w-full top-0 z-50">
             <nav
                 className={
                     navBar
-                        ? 'bg-white transition-shadow duration-300 ease-linear shadow-sm py-7 fixed w-full top-0 z-50'
-                        : 'bg-white py-7 fixed w-full top-0 z-50'
+                        ? 'bg-white transition-shadow duration-300 ease-linear shadow-sm py-7 relative w-full top-0'
+                        : 'bg-white py-7 relative w-full top-0'
                 }
             >
                 <div className="container mx-auto px-8 md:px-0 flex items-center justify-between lg:justify-start">
@@ -42,7 +41,10 @@ const NavBar = () => {
                         {links.map((link) => {
                             return (
                                 <li key={link.id}>
-                                    <NavLink to={link.path} className={link.style}>
+                                    <NavLink
+                                        to={link.path}
+                                        className={link.style}
+                                    >
                                         {link.name}
                                     </NavLink>
                                 </li>
@@ -55,26 +57,29 @@ const NavBar = () => {
                         className="text-[1.5rem] cursor-pointer text-primary md:hidden"
                     />
                 </div>
+                <div
+                    className={
+                        menu
+                            ? 'bg-white px-4 absolute w-full -z-[50] bottom-[-14rem] transition-all duration-700'
+                            : 'bg-white px-4 absolute w-full -z-[50] bottom-[20rem] transition-all duration-700'
+                    }
+                >
+                    <ul className="flex flex-col gap-3 py-3 ">
+                        {links.map((link) => {
+                            return (
+                                <li key={link.id}>
+                                    <NavLink
+                                        to={link.path}
+                                        className={link.style}
+                                    >
+                                        {link.name}
+                                    </NavLink>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
             </nav>
-            <div
-                className={
-                    menu
-                        ? 'bg-white px-4 absolute w-full z-[40] bottom-[-14rem] transition-all duration-700'
-                        : 'bg-white px-4 absolute w-full -z-[50] bottom-[20rem] transition-all duration-700'
-                }
-            >
-                <ul className="flex flex-col gap-3 py-3">
-                    {links.map((link) => {
-                        return (
-                            <li key={link.id}>
-                                <NavLink to={link.path} className={link.style}>
-                                    {link.name}
-                                </NavLink>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
         </div>
     );
 };

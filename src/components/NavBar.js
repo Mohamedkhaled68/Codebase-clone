@@ -8,6 +8,10 @@ const NavBar = () => {
     const [navBar, setNavbar] = useState(false);
     const [menu, setMenu] = useState(false);
 
+    const closeMenuOnScroll = () => {
+        setMenu(false);
+    };
+
     const menuToggle = () => {
         setMenu(!menu);
     };
@@ -18,7 +22,10 @@ const NavBar = () => {
             setNavbar(false);
         }
     };
-    window.addEventListener('scroll', scroll);
+    window.addEventListener('scroll', () => {
+        closeMenuOnScroll();
+        scroll();
+    });
     return (
         <div className="fixed w-full top-0 z-50">
             <nav

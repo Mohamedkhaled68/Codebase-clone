@@ -17,7 +17,7 @@ const Home = () => {
                 <h1 className="text-center text-[2rem] md:text-[3rem] text-gray-900 font-[500]">
                     About Us
                 </h1>
-                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7">
+                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7 mx-7 lg:mx-0">
                     From an idea, to a full project, with 24/7 support for your
                     project, that’s what we have been doing since 2020, by a 40
                     person-team , a high quality, a variety of services, a full
@@ -29,14 +29,27 @@ const Home = () => {
                     best in each speciality.
                 </p>
             </section>
-            <section className="container mx-auto py-16 pb-24 border-b-[1px] border-[#000000c1]">
+            <section className="container mx-auto py-20 pb-24 border-b-[1px] border-[#000000c1]">
                 <h1 className="text-center mb-8 text-[2rem] md:text-[3rem] text-gray-900 font-[500]">
                     Our Services
                 </h1>
-                <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-10 mx-10 lg:mx-0">
                     {services.map((serv, idx) => {
                         return <ServicesCard key={idx} {...serv} />;
                     })}
+                </div>
+            </section>
+            <section className="container mx-auto py-16 pb-24 border-b-[1px] border-[#000000c1]">
+                <div className='flex justify-between items-center mx-3 lg:mx-0'>
+                    <div className="flex justify-between items-center gap-3">
+                        <div className="rounded-full w-10 h-10 flex justify-center items-center border-[1px] border-[#000]">
+                            <img className='w-5' src="https://codebase-tech.com/wp-content/themes/asooltech/dist/codebase/images/sm-logo.png" alt="/" />
+                        </div>
+                        <div className="hidden rounded-full p-[1.3rem] w-10 h-10 lg:flex justify-center items-center border-[1px] border-[#000]">
+                            <h1>Work</h1>
+                        </div>
+                    </div>
+                    <h1>LATEST WORK</h1>
                 </div>
             </section>
         </>

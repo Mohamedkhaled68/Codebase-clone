@@ -2,6 +2,7 @@ import React from 'react';
 import myVid from '../assets/video/codebase-v2-WordPress-site.mp4';
 import { services } from '../data/ourServices';
 import ServicesCard from './Home/ServicesCard';
+import ImgCarousel from './Home/ImgCarousel'
 
 
 const Home = () => {
@@ -17,7 +18,7 @@ const Home = () => {
                 <h1 className="text-center text-[2rem] md:text-[3rem] text-gray-900 font-[500]">
                     About Us
                 </h1>
-                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7 mx-7 lg:mx-0">
+                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7 mx-7 lg:mx-5">
                     From an idea, to a full project, with 24/7 support for your
                     project, that’s what we have been doing since 2020, by a 40
                     person-team , a high quality, a variety of services, a full
@@ -51,6 +52,7 @@ const Home = () => {
                     </div>
                     <h1>LATEST WORK</h1>
                 </div>
+                {/* <ImgCarousel/> */}
             </section>
         </>
     );

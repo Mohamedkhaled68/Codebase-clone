@@ -3,6 +3,7 @@ import myVid from '../assets/video/codebase-v2-WordPress-site.mp4';
 import { services } from '../data/ourServices';
 import ServicesCard from './Home/ServicesCard';
 
+
 const Home = () => {
     return (
         <>
@@ -41,7 +42,5 @@ const Home = () => {
         </>
     );
 };
-
-// {category, description, imgUrl}
 
 export default Home;

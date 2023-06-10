@@ -31,7 +31,7 @@ const NavBar = () => {
             <nav
                 className={
                     navBar
-                        ? 'bg-white transition-shadow duration-300 ease-linear shadow-sm py-7 relative w-full top-0'
+                        ? 'bg-white transition-shadow duration-300 ease-linear shadow-lg py-7 relative w-full top-0'
                         : 'bg-white py-7 relative w-full top-0'
                 }
             >

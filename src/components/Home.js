@@ -2,7 +2,7 @@ import React from 'react';
 import myVid from '../assets/video/codebase-v2-WordPress-site.mp4';
 import { services } from '../data/ourServices';
 import ServicesCard from './Home/ServicesCard';
-import ImgCarousel from './Home/ImgCarousel';
+import ImgCarousel from './Home/ImgCarousel'
 
 const Home = () => {
     return (
@@ -17,7 +17,7 @@ const Home = () => {
                 <h1 className="text-center text-[2rem] md:text-[3rem] text-gray-900 font-[500]">
                     About Us
                 </h1>
-                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7 mx-7 md:mx-16 lg:mx">
+                <p className="text-center text-[0.9rem] md:text-[1.16rem] mt-7 mx-7 md:mx-16 lg:mx-20">
                     From an idea, to a full project, with 24/7 support for your
                     project, that’s what we have been doing since 2020, by a 40
                     person-team , a high quality, a variety of services, a full
@@ -49,13 +49,18 @@ const Home = () => {
                                 alt="/"
                             />
                         </div>
-                        <div className="hidden rounded-full p-[1.3rem] w-10 h-10 lg:flex justify-center items-center border-[1px] border-[#000]">
+                        <div className="hidden rounded-3xl py-[7px] px-3 lg:flex justify-center items-center border-[1px] border-[#000]">
                             <h1>Work</h1>
                         </div>
                     </div>
                     <h1>LATEST WORK</h1>
                 </div>
-                {/* <ImgCarousel/> */}
+                <div className='mt-10 relative flex justify-center items-center'>
+                    <div className='absolute top-0 left-0 flex justify-center items-center'>
+                        <span className='text-[22rem] text-[#5d5d5d31]'>WORK</span>
+                    </div>
+                    <ImgCarousel/>
+                </div>
             </section>
         </>
     );

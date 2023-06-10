@@ -56,8 +56,8 @@ const Home = () => {
                     <h1>LATEST WORK</h1>
                 </div>
                 <div className='mt-10 relative flex justify-center items-center'>
-                    <div className='absolute top-0 left-0 flex justify-center items-center'>
-                        <span className='text-[22rem] text-[#5d5d5d31]'>WORK</span>
+                    <div className='hidden absolute top-0 left-0 md:flex justify-center items-center'>
+                        <span className='md:text-[17rem] lg:text-[22rem] text-[#5d5d5d31]'>WORK</span>
                     </div>
                     <ImgCarousel/>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import myVid from '../assets/video/codebase-v2-WordPress-site.mp4';
 import { services } from '../data/ourServices';
 import ServicesCard from './Home/ServicesCard';
-import ImgCarousel from './Home/ImgCarousel'
+import ImgCarousel from './Home/ImgCarousel';
 
 const Home = () => {
     return (
@@ -55,11 +55,19 @@ const Home = () => {
                     </div>
                     <h1>LATEST WORK</h1>
                 </div>
-                <div className='mt-10 relative flex justify-center items-center'>
-                    <div className='hidden absolute top-0 left-0 md:flex justify-center items-center'>
-                        <span className='md:text-[17rem] lg:text-[22rem] text-[#5d5d5d31]'>WORK</span>
+                <h1 className="text-center text-[2.2rem] font-[400] my-5">
+                    OurWork
+                </h1>
+                <div className="mt-10 relative flex justify-center items-center">
+                    <div className="hidden absolute top-0 left-0 md:flex justify-center items-center">
+                        <span className="md:text-[17rem] lg:text-[22rem] text-[#5d5d5d31]">
+                            WORK
+                        </span>
                     </div>
-                    <ImgCarousel/>
+                    <ImgCarousel />
+                </div>
+                <div className="w-full flex justify-center items-center mt-20">
+                    <h1 className='underline text-[1.8rem]'>MORE WORK</h1>
                 </div>
             </section>
         </>

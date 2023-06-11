@@ -31,8 +31,8 @@ const NavBar = () => {
             <nav
                 className={
                     navBar
-                        ? 'bg-white transition-shadow duration-300 ease-linear shadow-lg py-7 relative w-full top-0'
-                        : 'bg-white py-7 relative w-full top-0'
+                        ? 'bg-white transition-shadow md:px-8 duration-300 ease-linear shadow-lg py-7 lg:px-24 relative w-full top-0'
+                        : 'bg-white py-7 md:px-8 lg:px-24 relative w-full top-0'
                 }
             >
                 <div className="container mx-auto px-8 md:px-0 flex items-center justify-between lg:justify-start">

@@ -42,8 +42,8 @@ const App = () => {
                     onClick={() => scrollUp()}
                     className={
                         scrollBtn
-                            ? 'flex flex-col items-center rounded-full bg-[#c5c5c549]  p-3 px-[0.9rem] fixed opacity-100 right-6 bottom-[2.2rem] border-[2px] border-[white] shadow-lg transition-all duration-700'
-                            : 'flex flex-col items-center rounded-full bg-[#26262662]  p-3 px-[0.9rem] fixed opacity-[0.01] -right-14 bottom-[6rem] border-[2px] border-[white] shadow-lg transition-all duration-700'
+                            ? 'flex flex-col items-center rounded-full bg-[#c5c5c549]  p-3 px-[0.9rem] fixed opacity-100 right-6 bottom-[2.2rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]'
+                            : 'flex flex-col items-center rounded-full bg-[#26262662]  p-3 px-[0.9rem] fixed opacity-[0.01] -right-14 bottom-[6rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]'
                     }
                 >
                     <FontAwesomeIcon

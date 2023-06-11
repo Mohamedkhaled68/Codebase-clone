@@ -32,9 +32,16 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
     .swiper {
-        margin-right: 10rem;
-        margin-left: 10rem;
+        margin-right: 9.8rem;
+        margin-left: 9.8rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .swiper {
+        margin-right: 11rem;
+        margin-left: 11rem;
     }
 }

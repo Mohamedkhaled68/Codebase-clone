@@ -44,7 +44,7 @@ const NavBar = () => {
                             className="w-36"
                         />
                     </NavLink>
-                    <ul className="hidden md:flex ml-0 lg:ml-24">
+                    <ul className="hidden md:flex lg:ml-24">
                         {links.map((link) => {
                             return (
                                 <li key={link.id}>

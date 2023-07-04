@@ -38,8 +38,8 @@ const Header = () => {
                                     <li
                                         className={
                                             selection === category
-                                                ? "cursor-pointer hover:translate-x-[10%] text-primary duration-500"
-                                                : "cursor-pointer hover:translate-x-[10%] hover:text-primary duration-500"
+                                                ? "text-[1.07rem] cursor-pointer hover:translate-x-[10%] text-primary duration-500"
+                                                : "text-[1.07rem] cursor-pointer hover:translate-x-[10%] hover:text-primary duration-500"
                                         }
                                         key={idx}
                                         onClick={() => filterJobs(category)}

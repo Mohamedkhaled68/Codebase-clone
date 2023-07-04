@@ -1,13 +1,13 @@
 import React from "react";
 
-const Jobs = ({myCareers}) => {
+const Jobs = ({ myCareers }) => {
     return (
         <div className="flex justify-between items-start w-[80%] mt-[-8rem]">
             <div className="jobs">
                 {myCareers.map((job, idx) => {
                     return (
                         <div
-                            className="mb-[5rem] flex flex-col gap-[1.6rem] py-[1.5rem] border-b-[1px] border-[#bdbdbd98] cursor-pointer"
+                            className="w-[100%] mb-[5rem] flex flex-col gap-[1.6rem] py-[1.5rem] border-b-[1px] border-[#bdbdbd98] cursor-pointer"
                             key={idx}
                         >
                             <h1 className="font-semibold text-[1.2rem]">

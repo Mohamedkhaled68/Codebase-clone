@@ -1,4 +1,4 @@
-export const carousel = [
+export const imgCarousel = [
     {
         imgUrl: 'https://codebase-tech.com/wp-content/uploads/2023/02/Banner-3.png',
         titleBtn: 'ATS',

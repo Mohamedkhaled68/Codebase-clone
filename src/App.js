@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home.js';
-import Work from './components/Work.js';
-import OurServices from './components/OurServices.js';
-import Careers from './components/Careers.js';
-import AboutUs from './components/AboutUs.js';
-import ContactUs from './components/ContactUs.js';
-import NavBar from './components/NavBar.js';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home.js";
+import Work from "./pages/Work.js";
+import OurServices from "./pages/OurServices.js";
+import Careers from "./pages/Careers.js";
+import AboutUs from "./pages/AboutUs.js";
+import ContactUs from "./pages/ContactUs.js";
+import NavBar from "./components/NavBar.js";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
     const [scrollBtn, setScrollBtn] = useState(false);
@@ -19,11 +19,11 @@ const App = () => {
             setScrollBtn(false);
         }
     };
-    window.addEventListener('scroll', scroll);
+    window.addEventListener("scroll", scroll);
     const scrollUp = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth',
+            behavior: "smooth",
         });
     };
     return (
@@ -42,8 +42,8 @@ const App = () => {
                     onClick={() => scrollUp()}
                     className={
                         scrollBtn
-                            ? 'flex flex-col items-center rounded-full bg-[#c5c5c549]  p-3 px-[0.9rem] fixed opacity-100 right-6 bottom-[2.2rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]'
-                            : 'flex flex-col items-center rounded-full bg-[#26262662]  p-3 px-[0.9rem] fixed opacity-[0.01] -right-14 bottom-[6rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]'
+                            ? "flex flex-col items-center rounded-full bg-[#c5c5c549]  p-3 px-[0.9rem] fixed opacity-100 right-6 bottom-[2.2rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]"
+                            : "flex flex-col items-center rounded-full bg-[#26262662]  p-3 px-[0.9rem] fixed opacity-[0.01] -right-14 bottom-[6rem] border-[2px] border-[white] shadow-lg transition-all duration-700 z-[1000]"
                     }
                 >
                     <FontAwesomeIcon

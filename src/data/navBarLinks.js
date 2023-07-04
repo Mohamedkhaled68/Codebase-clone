@@ -1,39 +1,32 @@
-const linkStyle = 'text-[0.9rem] lg:text-[1rem] hover:text-primary ease-linear duration-500 font-pop p-5';
 export const links = [
     {
-        name: 'Home',
-        path: '/',
-        style: linkStyle,
+        name: "Home",
+        path: "/",
         id: 1,
     },
     {
-        name: 'Work',
-        path: '/work',
-        style: linkStyle,
+        name: "Work",
+        path: "/work",
         id: 2,
     },
     {
-        name: 'Our Services',
-        path: '/ourservices',
-        style: linkStyle,
+        name: "Our Services",
+        path: "/ourservices",
         id: 3,
     },
     {
-        name: 'Careers',
-        path: '/careers',
-        style: linkStyle,
+        name: "Careers",
+        path: "/careers",
         id: 4,
     },
     {
-        name: 'About US',
-        path: '/aboutus',
-        style: linkStyle,
+        name: "About US",
+        path: "/aboutus",
         id: 5,
     },
     {
-        name: 'Conatct Us',
-        path: '/contactus',
-        style: linkStyle,
+        name: "Conatct Us",
+        path: "/contactus",
         id: 6,
     },
 ];

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { links } from '../data/navBarLinks';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { links } from "../data/navBarLinks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
     const [navBar, setNavbar] = useState(false);
@@ -22,7 +22,7 @@ const NavBar = () => {
             setNavbar(false);
         }
     };
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
         closeMenuOnScroll();
         scroll();
     });
@@ -31,8 +31,8 @@ const NavBar = () => {
             <nav
                 className={
                     navBar
-                        ? 'bg-white transition-shadow md:px-8 duration-300 ease-linear shadow-lg py-7 lg:px-24 relative w-full top-0'
-                        : 'bg-white py-7 md:px-8 lg:px-24 relative w-full top-0'
+                        ? "bg-white transition-shadow md:px-8 duration-300 ease-linear shadow-sm py-7 lg:px-24 relative w-full top-0"
+                        : "bg-white py-7 md:px-8 lg:px-24 relative w-full top-0"
                 }
             >
                 <div className="container mx-auto px-8 md:px-0 flex items-center justify-between lg:justify-start">
@@ -44,13 +44,13 @@ const NavBar = () => {
                             className="w-36"
                         />
                     </NavLink>
-                    <ul className="hidden md:flex lg:ml-24">
+                    <ul className="hidden md:flex lg:ml-[7rem] xl:ml-[11rem]">
                         {links.map((link) => {
                             return (
                                 <li key={link.id}>
                                     <NavLink
                                         to={link.path}
-                                        className={link.style}
+                                        className="hover:text-primary ease-linear duration-500 font-pop p-3 md:text-[0.89rem] xl:p-5 xl:text-[1rem]"
                                     >
                                         {link.name}
                                     </NavLink>
@@ -67,8 +67,8 @@ const NavBar = () => {
                 <div
                     className={
                         menu
-                            ? 'bg-white px-4 absolute w-full -z-[50] bottom-[-14rem] transition-all duration-700'
-                            : 'bg-white px-4 absolute w-full -z-[50] bottom-[20rem] transition-all duration-700'
+                            ? "bg-white px-4 absolute w-full -z-[50] bottom-[-14rem] transition-all duration-700"
+                            : "bg-white px-4 absolute w-full -z-[50] bottom-[20rem] transition-all duration-700"
                     }
                 >
                     <ul className="flex flex-col gap-3 py-3 ">

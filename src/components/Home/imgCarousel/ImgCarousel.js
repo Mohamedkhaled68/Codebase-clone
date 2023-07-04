@@ -1,25 +1,25 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Mousewheel } from 'swiper/core';
-import { Pagination } from 'swiper';
-import { carousel } from '../../data/imgCarousel';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Mousewheel } from "swiper/core";
+import { Pagination } from "swiper";
+import { imgCarousel } from "../../../data/imgCarouselData";
 
-import 'swiper/css';
-import 'swiper/css/pagination';
+import "swiper/css";
+import "swiper/css/pagination";
 
-import './stylesmm.css';
+import "./imgCarouselStyles.css";
 SwiperCore.use([Mousewheel]);
 
 const ImgCarousel = () => {
     return (
         <Swiper
             style={{
-                '--swiper-pagination-color': '#fff',
-                '--swiper-pagination-bullet-inactive-color': '#999999',
-                '--swiper-pagination-bullet-inactive-opacity': '10',
-                '--swiper-pagination-bullet-size': '8px',
+                "--swiper-pagination-color": "#fff",
+                "--swiper-pagination-bullet-inactive-color": "#999999",
+                "--swiper-pagination-bullet-inactive-opacity": "10",
+                "--swiper-pagination-bullet-size": "8px",
             }}
-            direction={'vertical'}
+            direction={"vertical"}
             mousewheel={true}
             pagination={{
                 dynamicBullets: true,
@@ -27,7 +27,7 @@ const ImgCarousel = () => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            {carousel.map(({ imgUrl, titleBtn, type }, idx) => {
+            {imgCarousel.map(({ imgUrl, titleBtn, type }, idx) => {
                 return (
                     <SwiperSlide key={idx}>
                         <div className="cont relative flex items-end">

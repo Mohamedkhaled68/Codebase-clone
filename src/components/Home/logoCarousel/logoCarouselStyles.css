@@ -1,24 +1,28 @@
-.swiper {
+.logos .swiper {
     width: 100%;
-    height: 450px;
+    height: 100%;
+    margin: 0;
 }
 
-.swiper-slide {
+.logos .swiper-slide {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.swiper-slide div.cont {
-    width: 100%;
+.logos .swiper-slide div.cont {
+    width: 100px;
     height: 100%;
 }
 
-@media (max-width: 640px) {
+.logos .swiper-slide div.cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* @media (max-width: 640px) {
     .swiper {
         margin-right: 0.5rem;
         margin-left: 0.5rem;
@@ -63,6 +67,4 @@
         margin-right: 14rem;
         margin-left: 14rem;
     }
-}
-
-
+} */

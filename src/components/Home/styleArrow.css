@@ -1,0 +1,7 @@
+.arrow {
+    transition: 500ms ease-in-out;
+}
+.arrow-parent:hover .arrow {
+    color: #ef4e4c;
+    transform: translateX(50%);
+}

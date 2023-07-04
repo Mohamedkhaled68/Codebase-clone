@@ -2,6 +2,7 @@ import React from "react";
 import ImgCarousel from "./imgCarousel/ImgCarousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 import "./styleArrow.css";
 
 const OurWork = () => {
@@ -34,14 +35,16 @@ const OurWork = () => {
                     </div>
                     <ImgCarousel />
                 </div>
-                <div className="arrow-parent relative w-full flex justify-center items-baseline mt-20 cursor-pointer">
-                    <h1 className="text-[1.8rem] underline">MORE WORK</h1>
-                    <FontAwesomeIcon
-                        icon={faArrowRight}
-                        width={30}
-                        className="arrow ml-3 text-xl"
-                    />
-                </div>
+                <NavLink to="/work">
+                    <div className="arrow-parent relative w-full flex justify-center items-baseline mt-20 cursor-pointer">
+                        <h1 className="text-[1.8rem] underline">MORE WORK</h1>
+                        <FontAwesomeIcon
+                            icon={faArrowRight}
+                            width={30}
+                            className="arrow ml-3 text-xl"
+                        />
+                    </div>
+                </NavLink>
             </section>
         </>
     );

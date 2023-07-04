@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -21,9 +22,11 @@ const Footer = () => {
                             We Definitely Have An Answer, Get In Touch
                             <br /> With Us, We Are Here To Help You.
                         </p>
-                        <button className="mt-10 py-3 px-10 text-lg bg-primary text-white border-[#fff] border-[1px] hover:bg-white hover:text-primary transition-colors ease-linear duration-300 rounded-full">
-                            Get a free consultaion NOW
-                        </button>
+                        <NavLink to="/contactus">
+                            <button className="mt-10 py-3 px-10 text-lg bg-primary text-white border-[#fff] border-[1px] hover:bg-white hover:text-primary transition-colors ease-linear duration-300 rounded-full">
+                                Get a free consultaion NOW
+                            </button>
+                        </NavLink>
                     </div>
                 </div>
             </div>

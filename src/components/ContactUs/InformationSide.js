@@ -9,9 +9,9 @@ import {
 
 const InformationSide = () => {
     return (
-        <div className="right-side w-[35%]">
+        <div className="right-side lg:w-[35%]">
             <ul className="flex flex-col gap-[2.5rem]">
-                <li className="text-[1.3rem]">
+                <li className="text-[1.1rem] lg:text-[1.3rem]">
                     Give us a call or drop by anytime, we endea vour to answer
                     all enquiries within 24 hours on all days. We will be happy
                     to answer your questions.

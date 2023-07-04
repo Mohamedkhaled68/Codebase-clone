@@ -13,23 +13,23 @@ const Jobs = ({ myCareers }) => {
                             <h1 className="font-semibold text-[1.2rem]">
                                 {job.jobTitle}
                             </h1>
-                            <p className="text-slate-500 text-[1.2rem] w-[70%]">
+                            <p className="text-slate-500 lg:text-[1.2rem] lg:w-[70%]">
                                 {job.description}
                             </p>
-                            <div className="flex items-center gap-[20rem]">
+                            <div className="flex flex-col gap-[1rem] lg:flex-row lg:items-center lg:gap-[20rem]">
                                 <div className="location">
-                                    <h1 className="text-primary font-semibold text-[1.5rem] mb-[1rem]">
+                                    <h1 className="text-primary font-semibold lg:text-[1.5rem] lg:mb-[1rem]">
                                         Location
                                     </h1>
-                                    <p className="text-[1.3rem]">
+                                    <p className="lg:text-[1.3rem]">
                                         {job.location}
                                     </p>
                                 </div>
                                 <div className="area">
-                                    <h1 className="text-primary font-semibold text-[1.5rem] mb-[1rem]">
+                                    <h1 className="text-primary font-semibold lg:text-[1.5rem] lg:mb-[1rem]">
                                         Area
                                     </h1>
-                                    <p className="text-[1.3rem]">{job.area}</p>
+                                    <p className="lg:text-[1.3rem]">{job.area}</p>
                                 </div>
                             </div>
                         </div>

@@ -25,7 +25,7 @@ const Header = () => {
     };
     return (
         <>
-            <div className="main-page flex items-baseline gap-[1rem] px-[2rem] lg:px-[5rem] mt-[3rem]">
+            <div className="main-page flex flex-col-reverse lg:flex-row lg:items-baseline gap-[1rem] px-[2rem] lg:px-[5rem] mt-[3rem]">
                 <JobsSide myCareers={myCareers} />
                 <CategoriesSide
                     jobsCategory={jobsCategory}

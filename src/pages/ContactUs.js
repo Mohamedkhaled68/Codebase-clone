@@ -12,7 +12,7 @@ import InformationSide from "../components/ContactUs/InformationSide";
 const ContactUs = () => {
     return (
         <>
-            <div className="main-page flex items-baseline gap-[5rem] px-[2rem] lg:px-[5rem] mt-[3rem]">
+            <div className="main-page flex flex-col lg:flex-row items-baseline gap-[5rem] px-[2rem] lg:px-[5rem] mt-[3rem]">
                 <FormSide />
                 <InformationSide />
             </div>

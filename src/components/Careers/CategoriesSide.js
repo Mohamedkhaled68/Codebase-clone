@@ -2,8 +2,8 @@ import React from "react";
 
 const CategoriesSide = ({jobsCategory, filterJobs, selection}) => {
     return (
-        <div className="selectors">
-            <h1 className="text-[1.5rem] font-semibold mb-[3rem] text-primary">
+        <div className="selectors mb-[2rem]">
+            <h1 className="text-[1.5rem] font-semibold mb-[1rem] text-primary">
                 All Jobs
             </h1>
             <ul className="list-none flex flex-col gap-[1rem]">

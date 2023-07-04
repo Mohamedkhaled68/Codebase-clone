@@ -5,8 +5,8 @@ const FormSide = () => {
         e.preventDefault();
     };
     return (
-        <div className="left-side flex-1">
-            <h1 className="text-[3rem] font-semibold mb-[3rem]">Contact Us</h1>
+        <div className="left-side flex-1 mb-[10rem]">
+            <h1 className="text-[2.5rem] lg:text-[3rem] font-semibold mb-[3rem]">Contact Us</h1>
             <form
                 onSubmit={handleSubmit}
                 className="flex flex-col items-center gap-[2rem] relative"

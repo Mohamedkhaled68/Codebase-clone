@@ -1,4 +1,5 @@
 import React from "react";
+import JobDetails from "./JobDetails";
 
 const Jobs = ({ myCareers }) => {
     return (
@@ -13,7 +14,7 @@ const Jobs = ({ myCareers }) => {
                             <h1 className="font-semibold text-[1.2rem]">
                                 {job.jobTitle}
                             </h1>
-                            <p className="text-slate-500 lg:text-[1.2rem] lg:w-[70%]">
+                            <p className="text-slate-500 lg:text-[1.2rem] lg:w-[70%] line-clamp-2">
                                 {job.description}
                             </p>
                             <div className="flex flex-col gap-[1rem] lg:flex-row lg:items-center lg:gap-[20rem]">
@@ -29,7 +30,9 @@ const Jobs = ({ myCareers }) => {
                                     <h1 className="text-primary font-semibold lg:text-[1.5rem] lg:mb-[1rem]">
                                         Area
                                     </h1>
-                                    <p className="lg:text-[1.3rem]">{job.area}</p>
+                                    <p className="lg:text-[1.3rem]">
+                                        {job.area}
+                                    </p>
                                 </div>
                             </div>
                         </div>

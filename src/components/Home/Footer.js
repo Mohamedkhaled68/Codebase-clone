@@ -54,7 +54,7 @@ const Footer = () => {
                         <p className="text-white">info@codebase-tech.com</p>
                     </div>
                 </div>
-                <p className="text-white text-[15px] absolute bottom-3">
+                <p className="text-white text-[16px] absolute bottom-3">
                     Copyright © 2023 CODEBASE
                 </p>
             </div>

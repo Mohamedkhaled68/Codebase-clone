@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Jobs from "./Jobs";
 import { jobsCategory } from "../../data/CareersData";
 import { careers } from "../../data/CareersData";
 import JobsSide from "./JobsSide";

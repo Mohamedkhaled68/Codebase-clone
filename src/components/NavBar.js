@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { links } from "../data/navBarLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +7,7 @@ import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 const NavBar = () => {
     const [navBar, setNavbar] = useState(false);
     const [menu, setMenu] = useState(false);
+    const [serv, setServ] = useState(false);
 
     const closeMenuOnScroll = () => {
         setMenu(false);
@@ -47,7 +48,14 @@ const NavBar = () => {
                     <ul className="hidden md:flex lg:ml-[7rem] xl:ml-[11rem]">
                         {links.map((link) => {
                             return (
-                                <li key={link.id}>
+                                <li
+                                    key={link.id}
+                                    onClick={() => {
+                                        if (link.id == 3) {
+                                            setServ(!serv);
+                                        }
+                                    }}
+                                >
                                     <NavLink
                                         to={link.path}
                                         className="hover:text-primary ease-linear duration-500 font-pop p-3 md:text-[0.89rem] xl:p-5 xl:text-[1rem]"
@@ -86,6 +94,21 @@ const NavBar = () => {
                         })}
                     </ul>
                 </div>
+                {serv && (
+                    <div className="absolute max-w-[350px] px-4 py-2 bg-white border-t-[1.5px] border-primary left-[50%] translate-x-[-50%] bottom-[-100%] translate-y-[-5%] shadow-2xl">
+                        <ul className="flex flex-wrap gap-4 list-disc">
+                            <li className="hover:ml-3 duration-300 ml-2">
+                                <Link>Web Development</Link>
+                            </li>
+                            <li className="hover:ml-3 duration-300 ml-2">
+                                <Link>Mobile Development</Link>
+                            </li>
+                            <li className="hover:ml-3 duration-300 flex-1 ml-2">
+                                <Link>Branding</Link>
+                            </li>
+                        </ul>
+                    </div>
+                )}
             </nav>
         </div>
     );

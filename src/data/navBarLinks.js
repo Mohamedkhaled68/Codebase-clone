@@ -11,7 +11,6 @@ export const links = [
     },
     {
         name: "Our Services",
-        path: "/ourservices",
         id: 3,
     },
     {

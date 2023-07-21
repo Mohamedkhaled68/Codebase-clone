@@ -9,6 +9,8 @@ import ContactUs from "./pages/ContactUs.js";
 import NavBar from "./components/NavBar.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import Web from "./components/Our Services/web dev/Web.js";
+import Mobile from "./components/Our Services/Mobile.js";
 
 const App = () => {
     const [scrollBtn, setScrollBtn] = useState(false);
@@ -33,7 +35,10 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/work" element={<Work />} />
-                    <Route path="/ourservices" element={<OurServices />} />
+                    <Route path="/ourservices" element={<OurServices />}>
+                        <Route path="/ourservices/web" element={<Web />} />
+                        <Route path="/ourservices/mobile" element={<Mobile />} />
+                    </Route>
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/aboutus" element={<AboutUs />} />
                     <Route path="/contactus" element={<ContactUs />} />

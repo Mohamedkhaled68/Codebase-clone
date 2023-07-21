@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { links } from "../data/navBarLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
+import OutSideClickHandler from "react-outside-click-handler";
 
 const NavBar = () => {
     const [navBar, setNavbar] = useState(false);
@@ -95,19 +96,21 @@ const NavBar = () => {
                     </ul>
                 </div>
                 {serv && (
-                    <div className="absolute max-w-[350px] px-4 py-2 bg-white border-t-[1.5px] border-primary left-[50%] translate-x-[-50%] bottom-[-100%] translate-y-[-5%] shadow-2xl">
-                        <ul className="flex flex-wrap gap-4 list-disc">
-                            <li className="hover:ml-3 duration-300 ml-2">
-                                <Link>Web Development</Link>
-                            </li>
-                            <li className="hover:ml-3 duration-300 ml-2">
-                                <Link>Mobile Development</Link>
-                            </li>
-                            <li className="hover:ml-3 duration-300 flex-1 ml-2">
-                                <Link>Branding</Link>
-                            </li>
-                        </ul>
-                    </div>
+                    <OutSideClickHandler onOutsideClick={()=>setServ(false)}>
+                        <div className="absolute max-w-[350px] px-4 py-2 bg-white border-t-[1.5px] border-primary left-[50%] translate-x-[-50%] bottom-[-100%] translate-y-[-5%] shadow-2xl">
+                            <ul className="flex flex-wrap gap-4 list-disc">
+                                <li className="hover:ml-3 duration-300 ml-2">
+                                    <Link to='/ourservices/web' onClick={()=>setServ(false)}>Web Development</Link>
+                                </li>
+                                <li className="hover:ml-3 duration-300 ml-2">
+                                    <Link to='/ourservices/mobile' onClick={()=>setServ(false)}>Mobile Development</Link>
+                                </li>
+                                <li className="hover:ml-3 duration-300 flex-1 ml-2">
+                                    <Link onClick={()=>setServ(false)}>Branding</Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </OutSideClickHandler>
                 )}
             </nav>
         </div>

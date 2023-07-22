@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "../data/navBarLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,6 +12,7 @@ const NavBar = () => {
 
     const closeMenuOnScroll = () => {
         setMenu(false);
+        setServ(false);
     };
 
     const menuToggle = () => {
@@ -28,6 +29,7 @@ const NavBar = () => {
         closeMenuOnScroll();
         scroll();
     });
+
     return (
         <div className="fixed w-full top-0 z-50">
             <nav
@@ -38,14 +40,14 @@ const NavBar = () => {
                 }
             >
                 <div className="container mx-auto px-8 md:px-0 flex items-center justify-between lg:justify-start">
-                    <NavLink to="/">
+                    <Link to="/">
                         <img
                             src="https://codebase-v3.codebase-product.com/wp-content/uploads/2022/08/Frame-1.png"
                             alt="/"
                             title="Codebase"
                             className="w-36"
                         />
-                    </NavLink>
+                    </Link>
                     <ul className="hidden md:flex lg:ml-[7rem] xl:ml-[11rem]">
                         {links.map((link) => {
                             return (
@@ -54,6 +56,9 @@ const NavBar = () => {
                                     onClick={() => {
                                         if (link.id === 3) {
                                             setServ(!serv);
+                                        } else {
+                                            setMenu(false);
+                                            window.scrollTo(0, 0);
                                         }
                                     }}
                                 >
@@ -83,7 +88,17 @@ const NavBar = () => {
                     <ul className="flex flex-col gap-3 py-3 ">
                         {links.map((link) => {
                             return (
-                                <li key={link.id}>
+                                <li
+                                    key={link.id}
+                                    onClick={() => {
+                                        if (link.id === 3) {
+                                            setServ(!serv);
+                                        } else {
+                                            setMenu(false);
+                                            window.scrollTo(0, 0);
+                                        }
+                                    }}
+                                >
                                     <NavLink
                                         to={link.path}
                                         className={link.style}
@@ -96,17 +111,29 @@ const NavBar = () => {
                     </ul>
                 </div>
                 {serv && (
-                    <OutSideClickHandler onOutsideClick={()=>setServ(false)}>
-                        <div className="absolute max-w-[350px] px-4 py-2 bg-white border-t-[1.5px] border-primary left-[50%] translate-x-[-50%] bottom-[-100%] translate-y-[-5%] shadow-2xl">
-                            <ul className="flex flex-wrap gap-4 list-disc">
-                                <li className="hover:ml-3 duration-300 ml-2">
-                                    <Link to='/ourservices/web' onClick={()=>setServ(false)}>Web Development</Link>
+                    <OutSideClickHandler onOutsideClick={() => setServ(false)}>
+                        <div className="absolute w-full py-[1rem] mx-[1rem] lg:max-w-[350px] px-4 lg:py-2 bg-white border-t-[1.5px] border-primary left-[50%] translate-x-[-50%] bottom-[-100%] translate-y-[150%] lg:translate-y-[-5%] shadow-2xl">
+                            <ul className="px-2 w-full flex flex-row justify-between items-center lg:flex-wrap gap-4 list-disc">
+                                <li className="hover:ml-3 duration-300 lg:ml-2">
+                                    <Link
+                                        to="/ourservices/web"
+                                        onClick={() => setServ(false)}
+                                    >
+                                        Web Development
+                                    </Link>
                                 </li>
-                                <li className="hover:ml-3 duration-300 ml-2">
-                                    <Link to='/ourservices/mobile' onClick={()=>setServ(false)}>Mobile Development</Link>
+                                <li className="hover:ml-3 duration-300 ml-[3rem] lg:ml-2">
+                                    <Link
+                                        to="/ourservices/mobile"
+                                        onClick={() => setServ(false)}
+                                    >
+                                        Mobile Development
+                                    </Link>
                                 </li>
-                                <li className="hover:ml-3 duration-300 flex-1 ml-2">
-                                    <Link onClick={()=>setServ(false)}>Branding</Link>
+                                <li className="hover:ml-3 duration-300 flex-1 ml-[3rem] lg:ml-2">
+                                    <Link onClick={() => setServ(false)}>
+                                        Branding
+                                    </Link>
                                 </li>
                             </ul>
                         </div>

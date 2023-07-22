@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./contactStyles.css";
 
 const FormSide = () => {
@@ -12,7 +12,7 @@ const FormSide = () => {
     const handleAnimation = (e) => {
         e.target.parentElement.className = styles.AnimateDiv;
         e.target.addEventListener("blur", () => {
-            if (e.target.value == 0) {
+            if (e.target.value === 0) {
                 e.target.parentElement.className = styles.div;
             }
         });

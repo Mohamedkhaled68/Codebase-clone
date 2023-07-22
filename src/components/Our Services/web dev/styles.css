@@ -16,15 +16,22 @@
 
 @media (max-width: 640px) {
     .swiper {
-        width: 400px;
+        width: 300px;
         height: 400px;
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .swiper {
         width: 600px;
         height: 400px;
     }
 }
 
+
+@media (min-width: 968px) {
+    .swiper {
+        width: 500px;
+        height: 600px;
+    }
+}

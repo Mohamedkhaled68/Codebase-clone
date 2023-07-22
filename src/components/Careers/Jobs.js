@@ -1,5 +1,4 @@
 import React from "react";
-import JobDetails from "./JobDetails";
 
 const Jobs = ({ myCareers }) => {
     return (

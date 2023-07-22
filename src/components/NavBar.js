@@ -52,7 +52,7 @@ const NavBar = () => {
                                 <li
                                     key={link.id}
                                     onClick={() => {
-                                        if (link.id == 3) {
+                                        if (link.id === 3) {
                                             setServ(!serv);
                                         }
                                     }}

@@ -10,12 +10,12 @@ const Header = () => {
     const filterJobs = (type) => {
         jobsCategory.map((jobCate) => {
             if (type === jobCate) {
-                if (jobCate == "All Jobs") {
+                if (jobCate === "All Jobs") {
                     setSelection("All Jobs");
                     setMyCareers(careers);
                 } else {
                     setMyCareers(
-                        careers.filter((job) => job.category == jobCate)
+                        careers.filter((job) => job.category === jobCate)
                     );
                     setSelection(type);
                 }
